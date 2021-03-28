@@ -1,0 +1,155 @@
+_type: export
+__export_format: 4
+__export_date: 2021-03-28T19:48:14.803Z
+__export_source: insomnia.desktop.app:v2021.1.1
+resources:
+  - _id: req_19821fa41fd74f9582668074e7f208e6
+    parentId: wrk_317eec015c6f48838445f2ff14c05571
+    modified: 1616952199608
+    created: 1616947336037
+    url: "{{ _.baseUrl }}/users"
+    name: Get Users
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - name: user_id
+        value: "{% response 'body', 'req_131394242cf24a2b9d0aaf82e6d3be1b',
+          'b64::JFsiaWQiXQ==::46b', 'never', 60 %}"
+        description: ""
+        id: pair_6ed17c2d4f604fc685411c1bc87f9532
+    authentication: {}
+    metaSortKey: -1616947336037
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: wrk_317eec015c6f48838445f2ff14c05571
+    parentId: null
+    modified: 1616946267686
+    created: 1616946267686
+    name: Desafio 01 - Introdução ao Solid
+    description: ""
+    scope: collection
+    _type: workspace
+  - _id: req_408549153b7d4edf9fab70efcbae1ad9
+    parentId: wrk_317eec015c6f48838445f2ff14c05571
+    modified: 1616953540059
+    created: 1616947315006
+    url: "{{ _.baseUrl }}/users/{% response 'body',
+      'req_131394242cf24a2b9d0aaf82e6d3be1b', 'b64::JFsiaWQiXQ==::46b', 'never',
+      60 %}"
+    name: Get User by Id
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1616947315006
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_481293ff777e45278f68233ad359aa68
+    parentId: wrk_317eec015c6f48838445f2ff14c05571
+    modified: 1616951782635
+    created: 1616947266640
+    url: "{{ _.baseUrl }}/users/{% response 'body',
+      'req_131394242cf24a2b9d0aaf82e6d3be1b', 'b64::JFsiaWQiXQ==::46b', 'never',
+      60 %}/admin"
+    name: Make a User in Admin
+    description: ""
+    method: PATCH
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1616947266640
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_131394242cf24a2b9d0aaf82e6d3be1b
+    parentId: wrk_317eec015c6f48838445f2ff14c05571
+    modified: 1616952940807
+    created: 1616946324009
+    url: "{{ _.baseUrl }}/users"
+    name: Create User
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name": "Fernando Soares",
+        	"email": "fermaia22@gmail.com"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_b6739528eef54141b149767d200387fe
+    authentication: {}
+    metaSortKey: -1616946324009
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: env_7fa8d99e9c458d77eec839df1a971f369ed17e0d
+    parentId: wrk_317eec015c6f48838445f2ff14c05571
+    modified: 1616946268140
+    created: 1616946268140
+    name: Base Environment
+    data: {}
+    dataPropertyOrder: null
+    color: null
+    isPrivate: false
+    metaSortKey: 1616946268140
+    _type: environment
+  - _id: jar_7fa8d99e9c458d77eec839df1a971f369ed17e0d
+    parentId: wrk_317eec015c6f48838445f2ff14c05571
+    modified: 1616946268170
+    created: 1616946268170
+    name: Default Jar
+    cookies: []
+    _type: cookie_jar
+  - _id: spc_c61294eb42e64a8a931da1993c34bd78
+    parentId: wrk_317eec015c6f48838445f2ff14c05571
+    modified: 1616946267691
+    created: 1616946267691
+    fileName: Desafio 01 - Introdução ao Solid
+    contents: ""
+    contentType: yaml
+    _type: api_spec
+  - _id: env_7c13a3114f8b4b2cbaa0bd430efaddda
+    parentId: env_7fa8d99e9c458d77eec839df1a971f369ed17e0d
+    modified: 1616948479054
+    created: 1616946275018
+    name: Desenvolvimento
+    data:
+      baseUrl: http://localhost:3333
+    dataPropertyOrder:
+      "&":
+        - baseUrl
+    color: "#832e8e"
+    isPrivate: false
+    metaSortKey: 1616946275018
+    _type: environment
